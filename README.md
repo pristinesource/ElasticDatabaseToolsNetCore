@@ -1,3 +1,5 @@
+[Nuget Package](https://www.nuget.org/packages/ElasticScaleNetCore.Client/1.0.0)
+
 # Elastic database tools for Azure SQL Database
 Elastic database tools client library allows ADO.NET developers to create applications that implement and use the pattern known as database sharding in Azure SQL Database. Learn more at http://azure.microsoft.com/en-us/documentation/learning-paths/sql-database-elastic-scale/ .
 
