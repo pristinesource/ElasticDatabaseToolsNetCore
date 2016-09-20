@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2752D108
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4AF9CAD2-F444-47D5-9945-448B28CCA98F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ElasticScaleNetCore.Client", "src\ElasticScale.Client\ElasticScaleNetCore.Client.xproj", "{A4AE0AF5-0567-4CF6-95B0-35058E6CA3F9}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ElasticScaleNetCore.Client", "src\ElasticScaleNetCore.Client\ElasticScaleNetCore.Client.xproj", "{A4AE0AF5-0567-4CF6-95B0-35058E6CA3F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
