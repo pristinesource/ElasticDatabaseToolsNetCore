@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Implementation of a store operation.

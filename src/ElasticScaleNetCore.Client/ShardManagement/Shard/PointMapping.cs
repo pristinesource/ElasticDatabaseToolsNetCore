@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Arguments used to create a <see cref="PointMapping{TKey}"/>.

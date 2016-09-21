@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Recovery;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Schema;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Serves as the entry point for creation, management and lookup operations over shard maps.

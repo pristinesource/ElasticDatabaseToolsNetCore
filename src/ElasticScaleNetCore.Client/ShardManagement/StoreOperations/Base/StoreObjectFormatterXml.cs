@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Serializes and deserializes the store objects to/from xml format.

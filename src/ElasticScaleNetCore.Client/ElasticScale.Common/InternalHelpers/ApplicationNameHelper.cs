@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     internal static class ApplicationNameHelper
     {

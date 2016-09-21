@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Allows users to specify operations such as validation, to perform 

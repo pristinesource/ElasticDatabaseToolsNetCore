@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Definition of globally useful constants.
@@ -26,7 +26,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
         internal const int DefaultLockTimeOut = 60 * 1000;
 
         /// <summary>
-        /// Version information for Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement code
+        /// Version information for Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement code
         /// </summary>
         internal static string ShardManagementVersionInfo = ElasticScaleVersionInfo.ProductVersion;
 

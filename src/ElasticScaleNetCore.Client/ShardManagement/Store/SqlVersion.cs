@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// SQL backed storage representation of shard map manager store version.

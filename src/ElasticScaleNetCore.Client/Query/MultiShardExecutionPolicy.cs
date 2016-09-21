@@ -4,7 +4,7 @@
 // Purpose:
 // Defines the possible query execution policies 
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //

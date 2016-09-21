@@ -23,9 +23,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //
@@ -61,7 +61,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// <summary>
         /// The sql command to be executed against shards
         /// </summary>
-        private readonly DbCommand _dbCommand;
+        private readonly SqlCommand _dbCommand;
 
         /// <summary>
         /// Lock to enable thread-safe Cancel()
@@ -99,7 +99,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// <param name="command">The command to execute against the shards</param>
         /// <param name="commandTimeout">Command timeout<paramref name="command"/> 
         /// against ALL shards</param>
-        private MultiShardCommand(MultiShardConnection connection, DbCommand command, int commandTimeout)
+        private MultiShardCommand(MultiShardConnection connection, SqlCommand command, int commandTimeout)
         {
             this.Connection = connection;
             this.CommandTimeout = commandTimeout;
@@ -174,9 +174,8 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// <param name="commandTimeout">Command timeout for given commandText to be run against ALL shards</param>
         /// <returns></returns>
         /// <remarks>DEVNOTE: Should we expose a DbCommand instead? Do we even want to expose this at all?</remarks>
-        internal static MultiShardCommand Create(MultiShardConnection connection, DbCommand command, int commandTimeout)
+        internal static MultiShardCommand Create(MultiShardConnection connection, SqlCommand command, int commandTimeout)
         {
-            Contract.Requires(command is ICloneable);
 
             return new MultiShardCommand(connection, command, commandTimeout);
         }
@@ -259,7 +258,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// executing commands against individual shards.
         /// </summary>
         /// <remarks>
-        /// The <see cref="Microsoft.Azure.SqlDatabase.ElasticScale.RetryBehavior.DefaultRetryBehavior"/> is the default.
+        /// The <see cref="Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.RetryBehavior.DefaultRetryBehavior"/> is the default.
         /// </remarks>
         public RetryBehavior RetryBehavior
         {
@@ -596,7 +595,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                 this.ValidateCommand(behavior);
 
                 // Create a list of sql commands to run against each of the shards
-                List<Tuple<ShardLocation, DbCommand>> shardCommands = this.GetShardDbCommands();
+                List<Tuple<ShardLocation, SqlCommand>> shardCommands = this.GetShardDbCommands();
 
                 // Don't allow a new invocation if a Cancel() is already in progress
                 lock (_cancellationLock)
@@ -761,7 +760,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                             // arise potentially due to parallel Cancel and Close calls because this is the only
                             // thread that will be responsible for cleanup.
                             labeledReader.Command.Cancel();
-                            labeledReader.DbDataReader.Close();
+                            //labeledReader.DbDataReader.Close();
                         }
                     }
                     catch (Exception)
@@ -774,7 +773,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 
         private FanOutTask ExecuteReaderAsyncInternal(
             CommandBehavior behavior,
-            List<Tuple<ShardLocation, DbCommand>> commands,
+            List<Tuple<ShardLocation, SqlCommand>> commands,
             CommandCancellationManager cancellationToken,
             TransientFaultHandling.RetryPolicy commandRetryPolicy,
             TransientFaultHandling.RetryPolicy connectionRetryPolicy,
@@ -784,7 +783,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 
             for (int i = 0; i < shardCommandTasks.Length; i++)
             {
-                Tuple<ShardLocation, DbCommand> shardCommand = commands[i];
+                Tuple<ShardLocation, SqlCommand> shardCommand = commands[i];
 
                 shardCommandTasks[i] = this.GetLabeledDbDataReaderTask(
                     behavior,
@@ -822,7 +821,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
          System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         private Task<LabeledDbDataReader> GetLabeledDbDataReaderTask(
             CommandBehavior behavior,
-            Tuple<ShardLocation, DbCommand> commandTuple,
+            Tuple<ShardLocation, SqlCommand> commandTuple,
             CommandCancellationManager cmdCancellationMgr,
             TransientFaultHandling.RetryPolicy commandRetryPolicy,
             TransientFaultHandling.RetryPolicy connectionRetryPolicy,
@@ -831,7 +830,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
             TaskCompletionSource<LabeledDbDataReader> currentCompletion = new TaskCompletionSource<LabeledDbDataReader>();
 
             ShardLocation shard = commandTuple.Item1;
-            DbCommand command = commandTuple.Item2;
+            SqlCommand command = commandTuple.Item2;
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             // Always the close connection once the reader is done
@@ -853,7 +852,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                 behavior,
                 this.RetryPolicy);
 
-            Task<Tuple<DbDataReader, DbCommand>> commandExecutionTask = commandRetryPolicy.ExecuteAsync<Tuple<DbDataReader, DbCommand>>(
+            Task<Tuple<DbDataReader, SqlCommand>> commandExecutionTask = commandRetryPolicy.ExecuteAsync<Tuple<DbDataReader, SqlCommand>>(
             () =>
             {
                 // Execute command in the Threadpool
@@ -866,7 +865,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                     // The recommendation from the Sqlclient team is to either start off with a new sqlcommand instance 
                     // on every retry or close and reopen the connection. 
                     // We're going with the former approach here. 
-                    DbCommand commandToExecute = MultiShardUtils.CloneDbCommand(command, command.Connection);
+                    SqlCommand commandToExecute = MultiShardUtils.CloneSqlCommand(command, command.Connection);
 
                     // Open the connection if it isn't already
                     await this.OpenConnectionWithRetryAsync(
@@ -884,7 +883,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                         cmdCancellationMgr.Token)
                         .ConfigureAwait(false);
 
-                    return new Tuple<DbDataReader, DbCommand>(perShardReader, commandToExecute);
+                    return new Tuple<DbDataReader, SqlCommand>(perShardReader, commandToExecute);
                 });
             },
             cmdCancellationMgr.Token);
@@ -1231,11 +1230,11 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// Creates a list of commands to be executed against the shards associated with the connection.
         /// </summary>
         /// <returns>Pairs of shard locations and associated commands.</returns>
-        private List<Tuple<ShardLocation, DbCommand>> GetShardDbCommands()
+        private List<Tuple<ShardLocation, SqlCommand>> GetShardDbCommands()
         {
             return this.Connection
                        .ShardConnections
-                       .Select(sc => new Tuple<ShardLocation, DbCommand>(sc.Item1, MultiShardUtils.CloneDbCommand(_dbCommand, sc.Item2)))
+                       .Select(sc => new Tuple<ShardLocation, SqlCommand>(sc.Item1, MultiShardUtils.CloneSqlCommand(_dbCommand, sc.Item2)))
                        .ToList();
         }
 
@@ -1468,7 +1467,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
                 ValidateCommand(behavior);
 
                 // Create a list of sql commands to run against each of the shards
-                List<Tuple<ShardLocation, DbCommand>> shardCommands = this.GetShardDbCommands();
+                List<Tuple<ShardLocation, SqlCommand>> shardCommands = this.GetShardDbCommands();
 
                 // Don't allow a new invocation if a Cancel() is already in progress
                 lock (_cancellationLock)

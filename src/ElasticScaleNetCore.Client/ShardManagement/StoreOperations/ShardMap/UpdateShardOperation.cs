@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Updates a shard in given shard map.

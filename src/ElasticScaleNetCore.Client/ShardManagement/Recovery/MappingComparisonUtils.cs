@@ -6,7 +6,7 @@ using System.Collections;
 using System.Linq;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Recovery
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery
 {
     /// <summary>
     /// Contains utility methods for performing comparisons among collections of 

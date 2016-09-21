@@ -14,9 +14,9 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //

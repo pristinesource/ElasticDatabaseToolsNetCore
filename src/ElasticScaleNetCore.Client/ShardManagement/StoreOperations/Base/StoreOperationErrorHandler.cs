@@ -3,9 +3,9 @@
 
 using System;
 using System.Diagnostics;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Schema;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Utility class for handling SqlOperation errors returned from stored procedures.

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Factory for storage operation creation.

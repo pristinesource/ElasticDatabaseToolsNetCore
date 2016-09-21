@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Policy for AddOrUpdateMapping operation.
@@ -66,14 +66,14 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
         /// <param name="key">Key value.</param>
         /// <returns>Mapping corresponding to <paramref name="key"/> or null.</returns>
         ICacheStoreMapping LookupMappingByKey(IStoreShardMap shardMap, ShardKey key);
-
+    /*
         /// <summary>
         /// Increment specified perf counter.
         /// </summary>
         /// <param name="shardMap">Storage representation of shard map.</param>
         /// <param name="name">Performance counter to increment.s</param>
         void IncrementPerformanceCounter(IStoreShardMap shardMap, PerformanceCounterName name);
-
+        */
         /// <summary>
         /// Clears the cache.
         /// </summary>

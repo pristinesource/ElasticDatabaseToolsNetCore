@@ -7,10 +7,11 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
 {
     internal static class MultiShardUtils
     {
@@ -66,12 +67,9 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
         /// <param name="cmd">Command object to clone.</param>
         /// <param name="conn">Connection associated with the cloned command.</param>
         /// <returns>Clone of <paramref name="cmd"/>.</returns>
-        internal static DbCommand CloneDbCommand(DbCommand cmd, DbConnection conn)
+        internal static SqlCommand CloneSqlCommand(SqlCommand cmd, DbConnection conn)
         {
-            DbCommand clone = (DbCommand)(cmd as ICloneable).Clone();
-            clone.Connection = conn;
-
-            return clone;
+            return cmd.Clone();
         }
     }
 

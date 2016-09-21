@@ -9,9 +9,9 @@
 
 using System;
 using System.Runtime.Serialization;
-using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement;
+using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //
@@ -61,7 +61,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
             : base()
         {
         }
-
+    /*
         /// <summary>
         /// Initializes a new instance of the MultiShardSchemaMismatchException class with serialized data.
         /// </summary>
@@ -75,7 +75,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
             : base(info, context)
         {
         }
-
+        */
         #endregion Standard Exception Constructors
     }
 }

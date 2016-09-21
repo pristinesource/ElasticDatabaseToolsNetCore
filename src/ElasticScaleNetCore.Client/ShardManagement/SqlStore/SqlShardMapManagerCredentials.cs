@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Container for the credentials for SQL Server backed ShardMapManager.

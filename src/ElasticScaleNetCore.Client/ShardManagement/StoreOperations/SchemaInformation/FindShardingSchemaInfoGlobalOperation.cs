@@ -3,7 +3,7 @@
 
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Finds schema info for given name in GSM.

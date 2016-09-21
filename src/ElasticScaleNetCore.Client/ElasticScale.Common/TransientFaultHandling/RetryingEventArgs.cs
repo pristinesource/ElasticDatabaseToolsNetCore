@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     /// <summary>
     /// Shard management retrying event arguments

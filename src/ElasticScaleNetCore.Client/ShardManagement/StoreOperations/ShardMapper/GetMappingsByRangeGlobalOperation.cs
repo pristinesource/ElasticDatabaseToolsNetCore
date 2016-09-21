@@ -3,7 +3,7 @@
 
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Obtains all the mappings from the GSM based on given shard and range.

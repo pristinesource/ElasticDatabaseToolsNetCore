@@ -4,10 +4,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     /// <summary>
     /// Extension methods for System.Exception.

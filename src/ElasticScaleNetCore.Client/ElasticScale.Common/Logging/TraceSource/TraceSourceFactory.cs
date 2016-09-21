@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     /// <summary>
     /// Concrete implementation of ILogFactory that creates trace sources

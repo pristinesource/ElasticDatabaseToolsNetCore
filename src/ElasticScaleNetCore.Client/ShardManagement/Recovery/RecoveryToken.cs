@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Recovery
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery
 {
     /// <summary>
     /// Recovery token generated and used by methods of the <see cref="RecoveryManager"/> 

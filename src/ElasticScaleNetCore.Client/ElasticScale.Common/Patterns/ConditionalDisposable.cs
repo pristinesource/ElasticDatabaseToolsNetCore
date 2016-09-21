@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     /// <summary>
     /// A disposable object which opts-out of disposing the inner disposable

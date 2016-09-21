@@ -7,7 +7,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
 {
     /// <summary>
     /// Utility class to set and restore the System.Diagnostics CorrelationManager
@@ -15,19 +15,23 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale
     /// </summary>
     internal sealed class ActivityIdScope : IDisposable
     {
-        /// <summary>
-        /// The previous activity id that was in scope
-        /// </summary>
-        private readonly Guid _previousActivityId;
+    /// <summary>
+    /// The previous activity id that was in scope
+    /// </summary>
+#pragma warning disable CS0169
+    private readonly Guid _previousActivityId;
+#pragma warning restore CS0169
 
-        /// <summary>
-        /// Creates an instance of the <see cref="ActivityIdScope"/> class
-        /// </summary>
-        /// <param name="activityId"></param>
-        public ActivityIdScope(Guid activityId)
+    /// <summary>
+    /// Creates an instance of the <see cref="ActivityIdScope"/> class
+    /// </summary>
+    /// <param name="activityId"></param>
+    public ActivityIdScope(Guid activityId)
         {
+            /*
             _previousActivityId = Trace.CorrelationManager.ActivityId;
             Trace.CorrelationManager.ActivityId = activityId;
+            */
         }
 
         /// <summary>
@@ -35,7 +39,9 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale
         /// </summary>
         public void Dispose()
         {
+      /*
             Trace.CorrelationManager.ActivityId = _previousActivityId;
+            */
         }
     }
 }

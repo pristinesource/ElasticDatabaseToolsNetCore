@@ -8,7 +8,7 @@ using System.Globalization;
 using System.Net;
 using System.Threading;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Shard key value. Wraps the type and value and allows normalization/denormalization

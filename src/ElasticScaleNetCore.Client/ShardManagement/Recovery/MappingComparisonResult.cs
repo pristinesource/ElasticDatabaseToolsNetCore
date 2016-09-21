@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Recovery
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery
 {
     /// <summary>
     /// Result of comparison b/w the given range mappings.

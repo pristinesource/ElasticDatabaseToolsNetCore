@@ -3,7 +3,7 @@
 
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Obtains the shard map manager object if the GSM has the SMM objects in it.

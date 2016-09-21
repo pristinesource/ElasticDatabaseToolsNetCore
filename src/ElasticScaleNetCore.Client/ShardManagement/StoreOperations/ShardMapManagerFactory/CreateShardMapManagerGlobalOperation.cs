@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Deploys the SMM storage objects to the target GSM database.

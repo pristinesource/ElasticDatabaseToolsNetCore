@@ -3,11 +3,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
     /// <summary>
     /// Container for results of Store operations.
@@ -104,7 +105,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
             {
                 if (reader.FieldCount > 0)
                 {
-                    SqlResultType resultType = SqlResults.SqlResultTypeFromColumnName(reader.GetSchemaTable().Rows[1]["ColumnName"].ToString());
+                    SqlResultType resultType = SqlResults.SqlResultTypeFromColumnName(reader.GetColumnSchema()[1]["ColumnName"].ToString());
 
                     switch (resultType)
                     {
@@ -179,7 +180,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
             {
                 if (reader.FieldCount > 0)
                 {
-                    SqlResultType resultType = SqlResults.SqlResultTypeFromColumnName(reader.GetSchemaTable().Rows[1]["ColumnName"].ToString());
+                    SqlResultType resultType = SqlResults.SqlResultTypeFromColumnName(reader.GetColumnSchema()[1]["ColumnName"].ToString());
 
                     switch (resultType)
                     {
