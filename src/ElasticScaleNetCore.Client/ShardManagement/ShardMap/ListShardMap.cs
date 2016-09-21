@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Represents a shard map of points where points are of the specified key.

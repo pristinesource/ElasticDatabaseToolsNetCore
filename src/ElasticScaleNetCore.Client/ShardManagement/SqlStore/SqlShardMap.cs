@@ -4,7 +4,7 @@
 using System;
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// SQL based storage representation of a shard map.

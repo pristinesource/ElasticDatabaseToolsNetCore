@@ -3,7 +3,7 @@
 
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Gets all schema infos from GSM.

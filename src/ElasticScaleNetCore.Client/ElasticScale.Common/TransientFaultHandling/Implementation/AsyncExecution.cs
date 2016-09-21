@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Properties;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     internal partial class TransientFaultHandling
     {

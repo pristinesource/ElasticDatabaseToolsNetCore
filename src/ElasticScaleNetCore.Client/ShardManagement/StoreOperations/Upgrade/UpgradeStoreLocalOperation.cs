@@ -5,7 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Upgrade store structures at specified location.

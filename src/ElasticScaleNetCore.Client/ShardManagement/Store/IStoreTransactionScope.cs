@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Type of transaction scope.

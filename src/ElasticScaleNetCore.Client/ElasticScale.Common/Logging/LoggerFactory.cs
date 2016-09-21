@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     /// <summary>
     /// Generic pluggable logger factory for retrieving configured

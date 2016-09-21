@@ -4,7 +4,7 @@
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Adds given shard map to GSM.

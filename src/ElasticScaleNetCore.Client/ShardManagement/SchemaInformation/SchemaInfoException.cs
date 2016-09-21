@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Schema
 {
     /// <summary>
     /// The exception that is thrown when an error occurs during operations related to schema info collection.
@@ -78,6 +78,31 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema
             : base(message, inner)
         {
             this.ErrorCode = code;
+        }
+
+        /// <summary>
+        /// Initializes a new instance with serialized data.
+        /// </summary>
+        /// <param name="info">The object that holds the serialized object data</param>
+        /// <param name="context">The contextual information about the source or destination</param>
+        private SchemaInfoException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+            this.ErrorCode = (SchemaInfoErrorCode)info.GetValue("ErrorCode", typeof(ShardManagementErrorCode));
+        }
+
+        /// <summary>
+        /// Populates a SerializationInfo with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info">The SerializationInfo to populate with data.</param>
+        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info != null)
+            {
+                info.AddValue("ErrorCode", ErrorCode);
+                base.GetObjectData(info, context);
+            }
         }
 
         /// <summary>

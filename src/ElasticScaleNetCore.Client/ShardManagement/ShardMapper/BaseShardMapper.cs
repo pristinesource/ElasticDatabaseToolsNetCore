@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Base class for keyed mappers.
@@ -144,7 +144,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
                     csm.ResetTimeToLive();
                 }
 
-                //this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
+                this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
                 return result;
             }
             catch (ShardManagementException smme)
@@ -165,7 +165,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
                         constructMapping(this.Manager, this.ShardMap, sm),
                         connectionString,
                         options);
-                    //this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
+                    this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
                     return result;
                 }
                 else
@@ -214,7 +214,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
                         csm.ResetTimeToLive();
                     }
 
-                    //this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
+                    this.Manager.Cache.IncrementPerformanceCounter(this.ShardMap.StoreShardMap, PerformanceCounterName.DdrOperationsPerSec);
                     return result;
                 }
                 else

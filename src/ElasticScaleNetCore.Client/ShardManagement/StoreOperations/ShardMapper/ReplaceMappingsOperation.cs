@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Replaces existing mappings with new mappings in given shard map.

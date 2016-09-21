@@ -18,7 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     internal partial class TransientFaultHandling
     {

@@ -4,7 +4,7 @@
 using System;
 using System.Data.SqlTypes;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Storage representation of a shard schema info.

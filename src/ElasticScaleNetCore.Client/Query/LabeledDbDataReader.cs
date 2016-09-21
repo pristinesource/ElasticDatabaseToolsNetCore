@@ -12,9 +12,9 @@
 using System;
 using System.Data.Common;
 using System.Data.SqlClient;
-using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement;
+using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     /// <summary>
     /// Simple, immutable class for affiliating a DbDataReader with additional information

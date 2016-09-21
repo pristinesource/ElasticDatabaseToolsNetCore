@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Client")]
+[assembly: AssemblyTitle("Microsoft.Azure.SqlDatabase.ElasticScale.Client")]
 [assembly: AssemblyDescription("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -21,31 +21,31 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("4599fe76-62a2-4da8-8a0f-dd190c0c6c58")]
 
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ServiceCommon" + AssemblyRef.ProductPublicKey)]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query.UnitTests" + AssemblyRef.ProductPublicKey)]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.UnitTests" + AssemblyRef.ProductPublicKey)]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.SplitMerge.Client" + AssemblyRef.ProductPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.ServiceCommon" + AssemblyRef.ProductPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.Query.UnitTests" + AssemblyRef.ProductPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.UnitTests" + AssemblyRef.ProductPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.SplitMerge.Client" + AssemblyRef.ProductPublicKey)]
 [assembly: InternalsVisibleTo("Microsoft.SqlServer.DataWarehouse.Engine" + AssemblyRef.ElasticQueryPublicKey)]
 [assembly: InternalsVisibleTo("SplitMergeWorker" + AssemblyRef.ProductPublicKey)]
 [assembly: InternalsVisibleTo("ShardSplitMergeTests" + AssemblyRef.ProductPublicKey)]
 
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Client.Fakes" + AssemblyRef.FakesPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.Client.Fakes" + AssemblyRef.FakesPublicKey)]
 
 // No-op, purely for Resharper's intellisense, as it does not understand AssemblyRef.ProductPublicKey
 #if DEBUG
 #pragma warning disable 1700
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ServiceCommon, PublicKey=00")]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query.UnitTests, PublicKey=00")]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.UnitTests, PublicKey=00")]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.SplitMerge.Client, PublicKey=00")]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.ServiceCommon, PublicKey=00")]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.Query.UnitTests, PublicKey=00")]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.UnitTests, PublicKey=00")]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.SplitMerge.Client, PublicKey=00")]
 [assembly: InternalsVisibleTo("SplitMergeWorker, PublicKey=00")]
 [assembly: InternalsVisibleTo("ShardSplitMergeTests, PublicKey=00")]
 #pragma warning restore 1700
 #endif
 
 // Added reference to the nuget package in the unsigned versions
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ServiceCommon" + AssemblyRef.TestPublicKey)]
-[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.SplitMerge.Client" + AssemblyRef.TestPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.ServiceCommon" + AssemblyRef.TestPublicKey)]
+[assembly: InternalsVisibleTo("Microsoft.Azure.SqlDatabase.ElasticScale.SplitMerge.Client" + AssemblyRef.TestPublicKey)]
 [assembly: InternalsVisibleTo("SplitMergeWorker" + AssemblyRef.TestPublicKey)]
 [assembly: InternalsVisibleTo("ShardSplitMergeTests" + AssemblyRef.TestPublicKey)]
 

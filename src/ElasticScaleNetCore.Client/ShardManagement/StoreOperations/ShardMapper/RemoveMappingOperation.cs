@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Removes a mapping from given shard map.

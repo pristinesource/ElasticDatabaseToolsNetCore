@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Helper methods related to shard map instantiation.

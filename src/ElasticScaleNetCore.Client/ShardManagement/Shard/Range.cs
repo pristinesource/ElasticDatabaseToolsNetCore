@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>Represents a left-inclusive, right-exclusive range of values of type T.</summary>
     /// <typeparam name="TKey">Type of values.</typeparam>

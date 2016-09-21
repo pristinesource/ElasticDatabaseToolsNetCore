@@ -7,7 +7,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     /// <summary>
     /// Trace helper for CrossShardQuery
@@ -42,10 +42,8 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
             params object[] vars)
         {
             string fmtMessage = string.Format(message, vars);
-            logger.Info("Method: {0}; {1}; ActivityId: {2};", methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+            logger.Info("Method: {0}; {1}; ActivityId: {2};", methodName, fmtMessage, Trace.CorrelationManager.ActivityId);
+        }
 
         internal static void TraceWarning(this ILogger logger,
             string methodName,
@@ -54,8 +52,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
         {
             string fmtMessage = string.Format(message, vars);
             logger.Warning("Method: {0}; {1}; ActivityId: {2};", methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
+                Trace.CorrelationManager.ActivityId);
         }
 
         internal static void TraceError(this ILogger logger,
@@ -66,8 +63,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
         {
             string fmtMessage = string.Format(message, vars);
             logger.Error("Method: {0}; {1}; Exception: {2}; ActivityId: {3};", methodName, fmtMessage, ex.ToString(),
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+                Trace.CorrelationManager.ActivityId);
+        }
     }
 }

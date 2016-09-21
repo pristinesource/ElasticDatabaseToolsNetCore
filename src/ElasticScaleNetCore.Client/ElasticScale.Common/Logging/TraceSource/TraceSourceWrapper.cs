@@ -6,7 +6,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     /// <summary>
     /// System.Diagnostics TraceSource implementation of the ILogger interface
@@ -236,7 +236,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
         /// <param name="activityId"></param>
         public void TraceIn(string method, Guid activityId)
         {
-            _traceSource.TraceEvent((TraceEventType)TraceEventTypeMISSING.Start, 0, "Start.{0}. ActivityId: {1}", method, activityId);
+            _traceSource.TraceEvent(TraceEventType.Start, 0, "Start.{0}. ActivityId: {1}", method, activityId);
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
         /// <param name="activityId"></param>
         public void TraceOut(string method, Guid activityId)
         {
-            _traceSource.TraceEvent((TraceEventType)TraceEventTypeMISSING.Stop, 0, "Stop.{0}. ActivityId: {1}", method, activityId);
+            _traceSource.TraceEvent(TraceEventType.Stop, 0, "Stop.{0}. ActivityId: {1}", method, activityId);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
         public void TraceIn(string method, Guid activityId, string format, params object[] vars)
         {
             string fmtMessage = string.Format(format, vars);
-            _traceSource.TraceEvent((TraceEventType)TraceEventTypeMISSING.Start, 0, "Start.{0}. {1}. ActivityId: {2}", method, fmtMessage, activityId);
+            _traceSource.TraceEvent(TraceEventType.Start, 0, "Start.{0}. {1}. ActivityId: {2}", method, fmtMessage, activityId);
         }
 
         /// <summary>
@@ -272,32 +272,9 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
         public void TraceOut(string method, Guid activityId, string format, params object[] vars)
         {
             string fmtMessage = string.Format(format, vars);
-            _traceSource.TraceEvent((TraceEventType)TraceEventTypeMISSING.Stop, 0, "Stop.{0}. {1}. ActivityId: {2}", method, fmtMessage, activityId);
+            _traceSource.TraceEvent(TraceEventType.Stop, 0, "Stop.{0}. {1}. ActivityId: {2}", method, fmtMessage, activityId);
         }
 
         #endregion
     }
-
-  public enum TraceEventTypeMISSING {
-    //
-    // Summary:
-    //     Starting of a logical operation.
-    Start = 256,
-    //
-    // Summary:
-    //     Stopping of a logical operation.
-    Stop = 512,
-    //
-    // Summary:
-    //     Suspension of a logical operation.
-    Suspend = 1024,
-    //
-    // Summary:
-    //     Resumption of a logical operation.
-    Resume = 2048,
-    //
-    // Summary:
-    //     Changing of correlation identity.
-    Transfer = 4096
-  }
 }

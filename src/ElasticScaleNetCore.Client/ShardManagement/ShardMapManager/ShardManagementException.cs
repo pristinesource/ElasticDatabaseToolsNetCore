@@ -5,7 +5,7 @@ using System;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Represents error codes related to <see cref="ShardMapManager"/> operations.
@@ -318,6 +318,37 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             this.ErrorCategory = category;
             this.ErrorCode = code;
         }
+
+        /// <summary>
+        /// Initializes a new instance with serialized data.
+        /// </summary>
+        /// <param name="info">The object that holds the serialized object data</param>
+        /// <param name="context">The contextual information about the source or destination</param>
+        private ShardManagementException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+            this.ErrorCategory = (ShardManagementErrorCategory)info.GetValue("ErrorCategory", typeof(ShardManagementErrorCategory));
+            this.ErrorCode = (ShardManagementErrorCode)info.GetValue("ErrorCode", typeof(ShardManagementErrorCode));
+        }
+
+        #region Serialization Support
+
+        /// <summary>
+        /// Populates a SerializationInfo with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info">The SerializationInfo to populate with data.</param>
+        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info != null)
+            {
+                info.AddValue("ErrorCategory", ErrorCategory);
+                info.AddValue("ErrorCode", ErrorCode);
+                base.GetObjectData(info, context);
+            }
+        }
+
+        #endregion Serialization Support
 
         /// <summary>
         /// Error category.

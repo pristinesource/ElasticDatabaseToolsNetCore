@@ -3,7 +3,7 @@
 
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Detaches the given shard and corresponding mapping information to the GSM database.

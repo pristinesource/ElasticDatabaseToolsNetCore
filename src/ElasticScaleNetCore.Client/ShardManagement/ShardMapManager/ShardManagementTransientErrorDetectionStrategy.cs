@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Provides the transient error detection logic for transient faults that are specific to Shard map manager.

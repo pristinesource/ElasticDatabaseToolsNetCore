@@ -11,7 +11,7 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     // Suppression rationale: "Multi" is the correct spelling.
     //
@@ -53,6 +53,17 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
         public MultiShardAggregateException(Exception innerException)
             : this(new Exception[] { innerException })
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the MultiShardAggregateException class with serialized data.
+        /// </summary>
+        /// <param name="info">The object that holds the serialized object data.</param>
+        /// <param name="context">The contextual information about the source or destination.</param>
+        protected MultiShardAggregateException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+            _innerExceptions = (ReadOnlyCollection<Exception>)(info.GetValue("InnerExceptions", typeof(ReadOnlyCollection<Exception>)));
         }
 
         #endregion Standard Exception Constructors
@@ -103,6 +114,21 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
         }
 
         #endregion Additional Constructors
+
+        #region Serialization Support
+
+        /// <summary>
+        /// Populates a SerializationInfo with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info">The SerializationInfo to populate with data.</param>
+        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+            info.AddValue("InnerExceptions", _innerExceptions);
+        }
+
+        #endregion Serialization Support
 
         /// <summary>
         /// Gets a read-only collection of the <see cref="Exception"/> instances 

@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Replaces the GSM mappings for given shard map with the input mappings.

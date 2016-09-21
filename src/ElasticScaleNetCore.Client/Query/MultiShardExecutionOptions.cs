@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     /// <summary>
     /// Defines the available options when 

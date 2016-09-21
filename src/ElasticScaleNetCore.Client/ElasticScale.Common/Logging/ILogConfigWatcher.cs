@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 #endregion
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     /// <summary>
     /// Interface for exposing a logging configuration change

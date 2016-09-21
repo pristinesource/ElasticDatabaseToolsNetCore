@@ -14,7 +14,7 @@ using System;
 using System.ComponentModel;
 using System.Data.SqlClient;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     internal partial class TransientFaultHandling
     {

@@ -4,12 +4,12 @@
 // Purpose:
 // Public type to communicate failures when performing operations against a shard
 
-using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement;
+using Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement;
 using System;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //
@@ -112,12 +112,42 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
         {
         }
 
-    #endregion
+        /// <summary>
+        /// Initializes a new instance of the MultiShardException class with serialized data.
+        /// </summary>
+        /// <param name="info">
+        /// The <see cref="SerializationInfo"/> see that holds the serialized object data about the exception being thrown.
+        /// </param>
+        /// <param name="context">
+        /// The <see cref="StreamingContext"/> that contains contextual information about the source or destination.
+        /// </param>
+        protected MultiShardException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+            _shardLocation = (ShardLocation)(info.GetValue("ShardLocation", typeof(ShardLocation)));
+        }
 
-    /// <summary>
-    /// The shard associated with this exception
-    /// </summary>
-    public ShardLocation ShardLocation
+        #endregion Standard Exception Constructors
+
+        #region Serialization Methods
+
+        /// <summary>
+        /// Populates the provided <see cref="SerializationInfo"/> parameter with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info"><see cref="SerializationInfo"/> object to populate with data.</param>
+        /// <param name="context">The destination <see cref=" StreamingContext"/> object for this serialization.</param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+            info.AddValue("ShardLocation", _shardLocation);
+        }
+
+        #endregion Serialization Methods
+
+        /// <summary>
+        /// The shard associated with this exception
+        /// </summary>
+        public ShardLocation ShardLocation
         {
             get
             {

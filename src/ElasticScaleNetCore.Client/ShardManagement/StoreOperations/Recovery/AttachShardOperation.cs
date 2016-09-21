@@ -5,7 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Attaches the given shard map and shard information to the GSM database and update shard location in LSM.

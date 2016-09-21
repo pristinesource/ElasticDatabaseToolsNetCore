@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Recovery
 {
     /// <summary>
     /// Manages various recovery related tasks for a shard map manager. It helps 

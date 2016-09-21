@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 #endregion
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
+namespace Microsoft.Azure.SqlDatabase.ElasticScale
 {
     /// <summary>
     /// Definition of a generic logging interface to abstract 

@@ -10,7 +10,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.Query
 {
     // Suppression rationale: "Multi" is the spelling we want here.
     //
@@ -51,7 +51,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
             : base(message, innerException)
         {
         }
-    /*
+
         /// <summary>
         /// Initializes a new instance of the MultiShardDataReaderInternalException class 
         /// with serialized data and context.
@@ -66,7 +66,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query
             : base(info, context)
         {
         }
-        */
+
         #endregion Standard Exception Constructors
     }
 }

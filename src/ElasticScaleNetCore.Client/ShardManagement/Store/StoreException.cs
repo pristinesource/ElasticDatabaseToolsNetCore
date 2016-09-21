@@ -5,7 +5,7 @@ using System;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Representation of exceptions that occur during storage operations.
@@ -65,7 +65,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             : base(String.Format(CultureInfo.InvariantCulture, format, args), inner)
         {
         }
-    /*
+
         /// <summary>
         /// Initializes a new instance with serialized data.
         /// </summary>
@@ -75,6 +75,5 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             : base(info, context)
         {
         }
-        */
     }
 }

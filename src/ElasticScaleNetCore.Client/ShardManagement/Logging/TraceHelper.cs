@@ -4,7 +4,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Simple class that encapsulates an ILogger and 
@@ -42,10 +42,8 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             params object[] vars)
         {
             string fmtMessage = string.Format(message, vars);
-            logger.Verbose("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+            logger.Verbose("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage, Trace.CorrelationManager.ActivityId);
+        }
 
         /// <summary>
         /// /// Helper to trace at the Information TraceLevel to the ILogger
@@ -62,10 +60,8 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             params object[] vars)
         {
             string fmtMessage = string.Format(message, vars);
-            logger.Info("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+            logger.Info("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage, Trace.CorrelationManager.ActivityId);
+        }
 
         /// <summary>
         /// Helper to trace at the Warning TraceLevel to the ILogger
@@ -82,10 +78,8 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             params object[] vars)
         {
             string fmtMessage = string.Format(message, vars);
-            logger.Warning("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+            logger.Warning("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage, Trace.CorrelationManager.ActivityId);
+        }
 
         /// <summary>
         /// Helper to trace at the Error TraceLevel to the ILogger
@@ -102,9 +96,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             params object[] vars)
         {
             string fmtMessage = string.Format(message, vars);
-            logger.Error("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage,
-            //    Trace.CorrelationManager.ActivityId);
-            Guid.Empty);
-    }
+            logger.Error("{0}.{1}; {2}; ActivityId: {3};", componentName, methodName, fmtMessage, Trace.CorrelationManager.ActivityId);
+        }
     }
 }

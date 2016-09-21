@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement.Schema
 {
     /// <summary>
     /// Possible errors encountered by SchemaInfoCollection.

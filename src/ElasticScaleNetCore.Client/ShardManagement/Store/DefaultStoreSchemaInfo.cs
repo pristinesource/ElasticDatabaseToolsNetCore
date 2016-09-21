@@ -3,7 +3,7 @@
 
 using System.Data.SqlTypes;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Used for generating storage representation from client side mapping objects.

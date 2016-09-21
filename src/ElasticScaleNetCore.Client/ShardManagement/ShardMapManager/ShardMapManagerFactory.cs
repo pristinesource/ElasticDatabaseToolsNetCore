@@ -5,7 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Describes the policy used for initialization of <see cref="ShardMapManager"/> from the store.
@@ -472,7 +472,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
         /// </summary>
         public static void CreatePerformanceCategoryAndCounters()
         {
-            //PerfCounterInstance.CreatePerformanceCategoryAndCounters();
+            PerfCounterInstance.CreatePerformanceCategoryAndCounters();
         }
 
         /// <summary>

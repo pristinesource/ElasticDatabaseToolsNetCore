@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
+namespace Microsoft.Azure.SqlDatabase.ElasticScale.ShardManagement
 {
     /// <summary>
     /// Constructs requests for store operations.
