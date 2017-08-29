@@ -33,7 +33,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore
             }
 
             Type exceptionType = ex.GetType();
-            return types.Any(type => type.IsAssignableFrom(exceptionType));
+            return types.Any(type => type.GetTypeInfo().IsAssignableFrom(exceptionType));
         }
     }
 }

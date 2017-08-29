@@ -5,6 +5,7 @@ using System;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Diagnostics;
+using ElasticScaleNetCore.Client.ShardManagement;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {

@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using ElasticScaleNetCore.Client.ShardManagement;
 using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement

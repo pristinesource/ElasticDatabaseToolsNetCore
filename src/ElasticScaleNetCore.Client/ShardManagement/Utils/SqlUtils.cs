@@ -16,6 +16,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using ElasticScaleNetCore.Client.ShardManagement;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {
@@ -492,10 +493,9 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
         {
             List<UpgradeSteps> upgradeSteps = new List<UpgradeSteps>();
 
-      //ResourceSet rs = Scripts.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
+        //ResourceSet rs = Scripts.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
 
-      IEnumerable<PropertyInfo> props = typeof(Scripts).GetProperties(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).Where(p => p.PropertyType == typeof(string));
-
+            IEnumerable<PropertyInfo> props = typeof(Scripts).GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).Where(p => p.PropertyType == typeof(string));
 
             string upgradeFileNameFilter = @"^UpgradeShardMapManagerGlobalFrom(\d*).(\d*)";
 

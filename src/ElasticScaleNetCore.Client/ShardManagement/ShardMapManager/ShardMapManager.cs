@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using ElasticScaleNetCore.Client.ShardManagement;
 using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Recovery;
 using Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema;
 

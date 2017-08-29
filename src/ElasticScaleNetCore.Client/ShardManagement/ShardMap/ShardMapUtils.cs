@@ -2,9 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
@@ -60,29 +62,46 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
             ShardMapManager manager,
             IStoreShardMap ssm)
         {
+            Type typeOfShardMap;
+            ConstructorInfo ctInfo;
+
             switch (ssm.MapType)
             {
                 case ShardMapType.List:
                     // Create ListShardMap<TKey>
-                    return (ShardMap)Activator.CreateInstance(
-                            typeof(ListShardMap<>).MakeGenericType(
-                                ShardKey.TypeFromShardKeyType(ssm.KeyType)),
-                            BindingFlags.NonPublic | BindingFlags.Instance,
-                            null,
-                            new object[] { manager, ssm },
-                            CultureInfo.InvariantCulture);
+                    typeOfShardMap = typeof(ListShardMap<>).MakeGenericType(ShardKey.TypeFromShardKeyType(ssm.KeyType));
+                    ctInfo = typeOfShardMap.GetTypeInfo().DeclaredConstructors.Single(ct => CheckParamaterMatch(ct, manager, ssm));
+                    break;
 
                 default:
                     Debug.Assert(ssm.MapType == ShardMapType.Range);
-                    // Create RangeShardMap<TKey>
-                    return (ShardMap)Activator.CreateInstance(
-                            typeof(RangeShardMap<>).MakeGenericType(
-                                ShardKey.TypeFromShardKeyType(ssm.KeyType)),
-                            BindingFlags.NonPublic | BindingFlags.Instance,
-                            null,
-                            new object[] { manager, ssm },
-                            CultureInfo.InvariantCulture);
+                    typeOfShardMap = typeof(RangeShardMap<>).MakeGenericType(ShardKey.TypeFromShardKeyType(ssm.KeyType));
+                    ctInfo = typeOfShardMap.GetTypeInfo().DeclaredConstructors.Single(ct => CheckParamaterMatch(ct, manager, ssm));
+                    break;
             }
+
+            return ctInfo.Invoke(new object[] { manager, ssm }) as ShardMap;
+        }
+
+        private static bool CheckParamaterMatch(MethodBase  method, params object[] parameters)
+        {
+            var methodParameters = method.GetParameters();
+            parameters = parameters ?? new object[0];
+
+            if (parameters.Length != methodParameters.Length)
+            {
+                return false;
+            }
+
+            for (var i = 0; i < methodParameters.Length; i++)
+            {
+                if (!methodParameters[i].ParameterType.GetTypeInfo().IsAssignableFrom(parameters[i].GetType()))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
