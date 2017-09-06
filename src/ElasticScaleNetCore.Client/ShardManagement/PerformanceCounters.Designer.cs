@@ -10,7 +10,6 @@
 
 namespace ElasticScaleNetCore.Client.ShardManagement {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -23,7 +22,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class PerformanceCounters {
+    public class PerformanceCounters {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -37,10 +36,10 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.PerformanceCounters", typeof(PerformanceCounters).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.PerformanceCounters", typeof(PerformanceCounters).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -52,7 +51,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -64,7 +63,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to DDR operations/sec.
         /// </summary>
-        internal static string DdrOperationsPerSecDisplayName {
+        public static string DdrOperationsPerSecDisplayName {
             get {
                 return ResourceManager.GetString("DdrOperationsPerSecDisplayName", resourceCulture);
             }
@@ -73,7 +72,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Rate of data dependent routing (DDR) operations for this shard map.
         /// </summary>
-        internal static string DdrOperationsPerSecHelpText {
+        public static string DdrOperationsPerSecHelpText {
             get {
                 return ResourceManager.GetString("DdrOperationsPerSecHelpText", resourceCulture);
             }
@@ -82,7 +81,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mappings added or updated in cache/sec.
         /// </summary>
-        internal static string MappingsAddOrUpdatePerSecDisplayName {
+        public static string MappingsAddOrUpdatePerSecDisplayName {
             get {
                 return ResourceManager.GetString("MappingsAddOrUpdatePerSecDisplayName", resourceCulture);
             }
@@ -91,7 +90,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Rate at which mappings are being added or updated in cache for this shard map.
         /// </summary>
-        internal static string MappingsAddOrUpdatePerSecHelpText {
+        public static string MappingsAddOrUpdatePerSecHelpText {
             get {
                 return ResourceManager.GetString("MappingsAddOrUpdatePerSecHelpText", resourceCulture);
             }
@@ -100,7 +99,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Cached mappings.
         /// </summary>
-        internal static string MappingsCountDisplayName {
+        public static string MappingsCountDisplayName {
             get {
                 return ResourceManager.GetString("MappingsCountDisplayName", resourceCulture);
             }
@@ -109,7 +108,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Number of mappings cached for this shard map.
         /// </summary>
-        internal static string MappingsCountHelpText {
+        public static string MappingsCountHelpText {
             get {
                 return ResourceManager.GetString("MappingsCountHelpText", resourceCulture);
             }
@@ -118,7 +117,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping lookup cache misses/sec.
         /// </summary>
-        internal static string MappingsLookupFailedPerSecDisplayName {
+        public static string MappingsLookupFailedPerSecDisplayName {
             get {
                 return ResourceManager.GetString("MappingsLookupFailedPerSecDisplayName", resourceCulture);
             }
@@ -127,7 +126,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Rate of failed cache lookup operations for mappings in this shard map.
         /// </summary>
-        internal static string MappingsLookupFailedPerSecHelpText {
+        public static string MappingsLookupFailedPerSecHelpText {
             get {
                 return ResourceManager.GetString("MappingsLookupFailedPerSecHelpText", resourceCulture);
             }
@@ -136,7 +135,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping lookup cache hits/sec.
         /// </summary>
-        internal static string MappingsLookupSucceededPerSecDisplayName {
+        public static string MappingsLookupSucceededPerSecDisplayName {
             get {
                 return ResourceManager.GetString("MappingsLookupSucceededPerSecDisplayName", resourceCulture);
             }
@@ -145,7 +144,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Rate of successful cache lookup operations for mappings in this shard map.
         /// </summary>
-        internal static string MappingsLookupSucceededPerSecHelpText {
+        public static string MappingsLookupSucceededPerSecHelpText {
             get {
                 return ResourceManager.GetString("MappingsLookupSucceededPerSecHelpText", resourceCulture);
             }
@@ -154,7 +153,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mappings removed from cache/sec.
         /// </summary>
-        internal static string MappingsRemovePerSecDisplayName {
+        public static string MappingsRemovePerSecDisplayName {
             get {
                 return ResourceManager.GetString("MappingsRemovePerSecDisplayName", resourceCulture);
             }
@@ -163,7 +162,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Rate at which mappings are being removed from cache for this shard map.
         /// </summary>
-        internal static string MappingsRemovePerSecHelpText {
+        public static string MappingsRemovePerSecHelpText {
             get {
                 return ResourceManager.GetString("MappingsRemovePerSecHelpText", resourceCulture);
             }
@@ -172,7 +171,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Performance Monitor Users.
         /// </summary>
-        internal static string PerformanceMonitorUsersGroupName {
+        public static string PerformanceMonitorUsersGroupName {
             get {
                 return ResourceManager.GetString("PerformanceMonitorUsersGroupName", resourceCulture);
             }
@@ -181,7 +180,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Elastic Database: Shard Management.
         /// </summary>
-        internal static string ShardManagementPerformanceCounterCategory {
+        public static string ShardManagementPerformanceCounterCategory {
             get {
                 return ResourceManager.GetString("ShardManagementPerformanceCounterCategory", resourceCulture);
             }
@@ -190,7 +189,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Performance counters for tracking shard management operations and caching.
         /// </summary>
-        internal static string ShardManagementPerformanceCounterCategoryHelp {
+        public static string ShardManagementPerformanceCounterCategoryHelp {
             get {
                 return ResourceManager.GetString("ShardManagementPerformanceCounterCategoryHelp", resourceCulture);
             }

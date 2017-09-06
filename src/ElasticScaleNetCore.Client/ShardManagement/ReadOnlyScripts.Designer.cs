@@ -10,7 +10,6 @@
 
 namespace ElasticScaleNetCore.Client.ShardManagement {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -23,7 +22,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ReadOnlyScripts {
+    public class ReadOnlyScripts {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -37,10 +36,10 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.ReadOnlyScripts", typeof(ReadOnlyScripts).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.ReadOnlyScripts", typeof(ReadOnlyScripts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -52,7 +51,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -72,7 +71,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///declare @stmt varchar(128)
         ///if object_id(N&apos;__ShardManagement.ShardMapManagerGlobal&apos;, N&apos;U [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CheckShardMapManagerGlobal {
+        public static string CheckShardMapManagerGlobal {
             get {
                 return ResourceManager.GetString("CheckShardMapManagerGlobal", resourceCulture);
             }
@@ -89,7 +88,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///declare @stmt varchar(128)
         ///if object_id(N&apos;__ShardManagement.ShardMapManagerLocal&apos;, N&apos;U&apos; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CheckShardMapManagerLocal {
+        public static string CheckShardMapManagerLocal {
             get {
                 return ResourceManager.GetString("CheckShardMapManagerLocal", resourceCulture);
             }

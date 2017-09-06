@@ -182,7 +182,7 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.Query {
     /// <remarks>
     /// Similar to DbDataReader, close is idempotent.
     /// </remarks>
-    public void Close() {
+    public override void Close() {
       if(this.IsClosed) {
         s_tracer.Verbose("MultiShardDataReader is already closed");
         return;

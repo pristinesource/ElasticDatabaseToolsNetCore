@@ -490,12 +490,12 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
         /// <param name="parseLocal">Whether to parse ShardMapManagerLocal upgrade scripts, default = false</param>
         /// <returns></returns>
         private static IEnumerable<UpgradeSteps> ParseUpgradeScripts(bool parseLocal = false)
+
         {
             List<UpgradeSteps> upgradeSteps = new List<UpgradeSteps>();
 
-        //ResourceSet rs = Scripts.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
-
-            IEnumerable<PropertyInfo> props = typeof(Scripts).GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).Where(p => p.PropertyType == typeof(string));
+            //ResourceSet rs = Scripts.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
+            IEnumerable<PropertyInfo> props = typeof(Scripts).GetProperties(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).Where(p => p.PropertyType == typeof(string));
 
             string upgradeFileNameFilter = @"^UpgradeShardMapManagerGlobalFrom(\d*).(\d*)";
 

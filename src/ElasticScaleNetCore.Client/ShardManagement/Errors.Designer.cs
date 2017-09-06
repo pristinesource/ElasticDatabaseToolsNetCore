@@ -10,7 +10,6 @@
 
 namespace ElasticScaleNetCore.Client.ShardManagement {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -23,7 +22,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Errors {
+    public class Errors {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -37,10 +36,10 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.Errors", typeof(Errors).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.Errors", typeof(Errors).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -52,7 +51,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -64,7 +63,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Unsupport value &apos;{0}&apos; specified for parameter &apos;{1}&apos;..
         /// </summary>
-        internal static string _General_InvalidArgumentValue {
+        public static string _General_InvalidArgumentValue {
             get {
                 return ResourceManager.GetString("_General_InvalidArgumentValue", resourceCulture);
             }
@@ -73,7 +72,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The specified ShardRange {0} was not in the set of ShardRanges from which the local shardmap information can be rebuilt at location &apos;{1}&apos;..
         /// </summary>
-        internal static string _Recovery_InvalidRebuildShardSpecification {
+        public static string _Recovery_InvalidRebuildShardSpecification {
             get {
                 return ResourceManager.GetString("_Recovery_InvalidRebuildShardSpecification", resourceCulture);
             }
@@ -82,7 +81,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Recovery token {0} was not recognized..
         /// </summary>
-        internal static string _Recovery_InvalidRecoveryToken {
+        public static string _Recovery_InvalidRecoveryToken {
             get {
                 return ResourceManager.GetString("_Recovery_InvalidRecoveryToken", resourceCulture);
             }
@@ -91,7 +90,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The given location &apos;{0}&apos; does not have the necessary storage structures present for a shard. Error occurred while performing operation &apos;{1}&apos;..
         /// </summary>
-        internal static string _Recovery_ShardNotValid {
+        public static string _Recovery_ShardNotValid {
             get {
                 return ResourceManager.GetString("_Recovery_ShardNotValid", resourceCulture);
             }
@@ -100,7 +99,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The SchemaInfo object already contains a {0} table by the given name of [{1}].[{2}]..
         /// </summary>
-        internal static string _SchemaInfo_TableInfoAlreadyExists {
+        public static string _SchemaInfo_TableInfoAlreadyExists {
             get {
                 return ResourceManager.GetString("_SchemaInfo_TableInfoAlreadyExists", resourceCulture);
             }
@@ -109,7 +108,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; provided for the given &apos;{1}&apos; is not associated with current shard map &apos;{2}&apos;. The &apos;{3}&apos; operations required the shard to be associated with the current shard map..
         /// </summary>
-        internal static string _Shard_DifferentShardMap {
+        public static string _Shard_DifferentShardMap {
             get {
                 return ResourceManager.GetString("_Shard_DifferentShardMap", resourceCulture);
             }
@@ -118,7 +117,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; provided for the given &apos;{1}&apos; is not associated with current shard map manager at &apos;{2}&apos;. The &apos;{3}&apos; operations required the shard to be associated with the current shard map manager..
         /// </summary>
-        internal static string _Shard_DifferentShardMapManager {
+        public static string _Shard_DifferentShardMapManager {
             get {
                 return ResourceManager.GetString("_Shard_DifferentShardMapManager", resourceCulture);
             }
@@ -127,7 +126,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard key has maximum value which cannot be incremented. Perform the IsMax check on shard key before requesting next key..
         /// </summary>
-        internal static string _ShardKey_MaxValueCannotBeIncremented {
+        public static string _ShardKey_MaxValueCannotBeIncremented {
             get {
                 return ResourceManager.GetString("_ShardKey_MaxValueCannotBeIncremented", resourceCulture);
             }
@@ -136,7 +135,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard key has maximum value which cannot be represented. Perform the IsMax check on shard key before requesting a conversion..
         /// </summary>
-        internal static string _ShardKey_MaxValueCannotBeRepresented {
+        public static string _ShardKey_MaxValueCannotBeRepresented {
             get {
                 return ResourceManager.GetString("_ShardKey_MaxValueCannotBeRepresented", resourceCulture);
             }
@@ -145,7 +144,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The requested type &apos;{0}&apos; does not match the shard key type &apos;{1}&apos;..
         /// </summary>
-        internal static string _ShardKey_RequestedTypeDoesNotMatchShardKeyType {
+        public static string _ShardKey_RequestedTypeDoesNotMatchShardKeyType {
             get {
                 return ResourceManager.GetString("_ShardKey_RequestedTypeDoesNotMatchShardKeyType", resourceCulture);
             }
@@ -154,7 +153,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The data type of the shard key &apos;{0}&apos; does not match the data type of comparand shard key &apos;{1}&apos;. Comparison is only supported for shard keys with same type..
         /// </summary>
-        internal static string _ShardKey_ShardKeyTypesMustMatchForComparison {
+        public static string _ShardKey_ShardKeyTypesMustMatchForComparison {
             get {
                 return ResourceManager.GetString("_ShardKey_ShardKeyTypesMustMatchForComparison", resourceCulture);
             }
@@ -163,7 +162,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The specified ShardKeyType specified is not supported. .
         /// </summary>
-        internal static string _ShardKey_UnsupportedShardKeyType {
+        public static string _ShardKey_UnsupportedShardKeyType {
             get {
                 return ResourceManager.GetString("_ShardKey_UnsupportedShardKeyType", resourceCulture);
             }
@@ -172,7 +171,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Type not supported for shard keys..
         /// </summary>
-        internal static string _ShardKey_UnsupportedType {
+        public static string _ShardKey_UnsupportedType {
             get {
                 return ResourceManager.GetString("_ShardKey_UnsupportedType", resourceCulture);
             }
@@ -181,7 +180,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The given value is of type &apos;{0}&apos; which is an unsupported shard key type..
         /// </summary>
-        internal static string _ShardKey_UnsupportedValue {
+        public static string _ShardKey_UnsupportedValue {
             get {
                 return ResourceManager.GetString("_ShardKey_UnsupportedValue", resourceCulture);
             }
@@ -190,7 +189,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The type of specified value does not match the type specified in the &apos;{0}&apos; parameter..
         /// </summary>
-        internal static string _ShardKey_ValueDoesNotMatchShardKeyType {
+        public static string _ShardKey_ValueDoesNotMatchShardKeyType {
             get {
                 return ResourceManager.GetString("_ShardKey_ValueDoesNotMatchShardKeyType", resourceCulture);
             }
@@ -199,7 +198,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The length of raw value specified for the shard key ({0} bytes) does not match the expected length ({1} bytes) for the ShardKeyType ({2}) specified..
         /// </summary>
-        internal static string _ShardKey_ValueLengthUnexpected {
+        public static string _ShardKey_ValueLengthUnexpected {
             get {
                 return ResourceManager.GetString("_ShardKey_ValueLengthUnexpected", resourceCulture);
             }
@@ -208,7 +207,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The given port number &apos;{0}&apos; is invalid..
         /// </summary>
-        internal static string _ShardLocation_InvalidPort {
+        public static string _ShardLocation_InvalidPort {
             get {
                 return ResourceManager.GetString("_ShardLocation_InvalidPort", resourceCulture);
             }
@@ -217,7 +216,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The given &apos;{0}&apos; name is longer than the allowed length of &apos;{1}&apos; characters..
         /// </summary>
-        internal static string _ShardLocation_InvalidServerOrDatabase {
+        public static string _ShardLocation_InvalidServerOrDatabase {
             get {
                 return ResourceManager.GetString("_ShardLocation_InvalidServerOrDatabase", resourceCulture);
             }
@@ -226,7 +225,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The given protocol value &apos;{0}&apos; is not supported..
         /// </summary>
-        internal static string _ShardLocation_UnsupportedProtocol {
+        public static string _ShardLocation_UnsupportedProtocol {
             get {
                 return ResourceManager.GetString("_ShardLocation_UnsupportedProtocol", resourceCulture);
             }
@@ -235,7 +234,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard corresponding to location &apos;{0}&apos; could not be found in shard map &apos;{1}&apos; ..
         /// </summary>
-        internal static string _ShardMap_GetShard_ShardDoesNotExist {
+        public static string _ShardMap_GetShard_ShardDoesNotExist {
             get {
                 return ResourceManager.GetString("_ShardMap_GetShard_ShardDoesNotExist", resourceCulture);
             }
@@ -244,7 +243,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Property &apos;{0}&apos; must not be set in the input connection string for &apos;OpenConnection&apos; operations..
         /// </summary>
-        internal static string _ShardMap_OpenConnection_ConnectionStringPropertyDisallowed {
+        public static string _ShardMap_OpenConnection_ConnectionStringPropertyDisallowed {
             get {
                 return ResourceManager.GetString("_ShardMap_OpenConnection_ConnectionStringPropertyDisallowed", resourceCulture);
             }
@@ -253,7 +252,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Key values of type &apos;{0}&apos; are not supported. OpenConnectionForKey requests for the shard map &apos;{1}&apos; requires keys of type &apos;{2}&apos;..
         /// </summary>
-        internal static string _ShardMap_OpenConnectionForKey_KeyTypeNotSupported {
+        public static string _ShardMap_OpenConnectionForKey_KeyTypeNotSupported {
             get {
                 return ResourceManager.GetString("_ShardMap_OpenConnectionForKey_KeyTypeNotSupported", resourceCulture);
             }
@@ -262,7 +261,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; can not be converted to the target type {1}ShardMap&lt;{2}&gt;. Its actual type is {3}ShardMap&lt;{4}&gt;..
         /// </summary>
-        internal static string _ShardMapExtensions_AsTypedShardMap_ConversionFailure {
+        public static string _ShardMapExtensions_AsTypedShardMap_ConversionFailure {
             get {
                 return ResourceManager.GetString("_ShardMapExtensions_AsTypedShardMap_ConversionFailure", resourceCulture);
             }
@@ -271,7 +270,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; is not associated with the current instance of shard map manager at &apos;{1}&apos;. Only shard maps that are obtained from the same &apos;ShardMapManager&apos; instance can be used..
         /// </summary>
-        internal static string _ShardMapManager_DifferentShardMapManager {
+        public static string _ShardMapManager_DifferentShardMapManager {
             get {
                 return ResourceManager.GetString("_ShardMapManager_DifferentShardMapManager", resourceCulture);
             }
@@ -280,7 +279,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; could not be found in the shard map manager store at &apos;{1}&apos;..
         /// </summary>
-        internal static string _ShardMapManager_ShardMapLookupFailed {
+        public static string _ShardMapManager_ShardMapLookupFailed {
             get {
                 return ResourceManager.GetString("_ShardMapManager_ShardMapLookupFailed", resourceCulture);
             }
@@ -289,7 +288,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map name &apos;{0}&apos; is not supported. Shard map names are only allowed to contain unicode letters and digits..
         /// </summary>
-        internal static string _ShardMapManager_UnsupportedShardMapName {
+        public static string _ShardMapManager_UnsupportedShardMapName {
             get {
                 return ResourceManager.GetString("_ShardMapManager_UnsupportedShardMapName", resourceCulture);
             }
@@ -298,7 +297,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Length of shard map name &apos;{0}&apos; exceeds the maximum allowed length of &apos;{1}&apos; characters..
         /// </summary>
-        internal static string _ShardMapManager_UnsupportedShardMapNameLength {
+        public static string _ShardMapManager_UnsupportedShardMapNameLength {
             get {
                 return ResourceManager.GetString("_ShardMapManager_UnsupportedShardMapNameLength", resourceCulture);
             }
@@ -307,7 +306,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to &apos;{0}&apos; provided for operation &apos;{1}&apos; is not associated with the current shard map &apos;{2}&apos;. Only mappings associated with the same shard map as the given shard map can be used. Error occurred for parameter &apos;{3}&apos;..
         /// </summary>
-        internal static string _ShardMapping_DifferentShardMap {
+        public static string _ShardMapping_DifferentShardMap {
             get {
                 return ResourceManager.GetString("_ShardMapping_DifferentShardMap", resourceCulture);
             }
@@ -316,7 +315,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to &apos;{0}&apos; provided for operation &apos;{1}&apos; is not associated with the current instance of shard map manager at &apos;{2}&apos;. Only mappings associated with the same &apos;ShardMapManager&apos; instance as the the one associated with current shard map &apos;{3}&apos; can be used. Error occurred for parameter &apos;{4}&apos;..
         /// </summary>
-        internal static string _ShardMapping_DifferentShardMapManager {
+        public static string _ShardMapping_DifferentShardMapManager {
             get {
                 return ResourceManager.GetString("_ShardMapping_DifferentShardMapManager", resourceCulture);
             }
@@ -325,7 +324,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mappings provided for the Merge operation belonging to shard map &apos;{0}&apos; differ in their Status property. Merge operation is only allowed for mappings with same values for Status..
         /// </summary>
-        internal static string _ShardMapping_DifferentStatus {
+        public static string _ShardMapping_DifferentStatus {
             get {
                 return ResourceManager.GetString("_ShardMapping_DifferentStatus", resourceCulture);
             }
@@ -334,7 +333,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to LockId for locking the mapping referencing shard {0} with shard map name {1} has unsupported value &apos;{2}&apos;..
         /// </summary>
-        internal static string _ShardMapping_LockIdNotSupported {
+        public static string _ShardMapping_LockIdNotSupported {
             get {
                 return ResourceManager.GetString("_ShardMapping_LockIdNotSupported", resourceCulture);
             }
@@ -343,7 +342,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mappings provided for the merge operation which belong to shard map &apos;{0}&apos; belong to different shards &apos;{1}&apos; and &apos;{2}&apos;. Merge operation is only allowed for mappings belonging to the same shard..
         /// </summary>
-        internal static string _ShardMapping_MergeDifferentShards {
+        public static string _ShardMapping_MergeDifferentShards {
             get {
                 return ResourceManager.GetString("_ShardMapping_MergeDifferentShards", resourceCulture);
             }
@@ -352,7 +351,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mappings provided for the merge operation are not adjacent. Merge operation is only allowed for adjacent mappings..
         /// </summary>
-        internal static string _ShardMapping_MergeNotAdjacent {
+        public static string _ShardMapping_MergeNotAdjacent {
             get {
                 return ResourceManager.GetString("_ShardMapping_MergeNotAdjacent", resourceCulture);
             }
@@ -361,7 +360,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Requested range is exactly the range for existing mapping. Operation is only allowed for proper subsets of existing range..
         /// </summary>
-        internal static string _ShardMapping_RangeNotProperSubset {
+        public static string _ShardMapping_RangeNotProperSubset {
             get {
                 return ResourceManager.GetString("_ShardMapping_RangeNotProperSubset", resourceCulture);
             }
@@ -370,7 +369,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Requested range is not a subset of the existing range mapping..
         /// </summary>
-        internal static string _ShardMapping_RangeNotSubset {
+        public static string _ShardMapping_RangeNotSubset {
             get {
                 return ResourceManager.GetString("_ShardMapping_RangeNotSubset", resourceCulture);
             }
@@ -379,7 +378,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Split point lies on the boundary or outside of the specified range mapping..
         /// </summary>
-        internal static string _ShardMapping_SplitPointOutOfRange {
+        public static string _ShardMapping_SplitPointOutOfRange {
             get {
                 return ResourceManager.GetString("_ShardMapping_SplitPointOutOfRange", resourceCulture);
             }
@@ -388,7 +387,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The low value {0} is greater than or equal to the high value {1}. Lower value must be less than the higher value..
         /// </summary>
-        internal static string _ShardRange_LowGreaterThanOrEqualToHigh {
+        public static string _ShardRange_LowGreaterThanOrEqualToHigh {
             get {
                 return ResourceManager.GetString("_ShardRange_LowGreaterThanOrEqualToHigh", resourceCulture);
             }
@@ -397,7 +396,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The required property &apos;{0}&apos; must be set in the connection string..
         /// </summary>
-        internal static string _SqlShardMapManagerCredentials_ConnectionStringPropertyRequired {
+        public static string _SqlShardMapManagerCredentials_ConnectionStringPropertyRequired {
             get {
                 return ResourceManager.GetString("_SqlShardMapManagerCredentials_ConnectionStringPropertyRequired", resourceCulture);
             }
@@ -406,7 +405,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to All required parameters for operation &apos;{0}&apos; are not supplied. Error occurred while executing procedure &apos;{1}&apos; on the shard map manager database. Please verify and match library and store version..
         /// </summary>
-        internal static string _Store_MissingSprocParametersGlobal {
+        public static string _Store_MissingSprocParametersGlobal {
             get {
                 return ResourceManager.GetString("_Store_MissingSprocParametersGlobal", resourceCulture);
             }
@@ -415,7 +414,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to All required parameters for operation &apos;{0}&apos; at shard &apos;{1}&apos; are not supplied. Error occurred while executing procedure &apos;{2}&apos; on the shard. Please verify and match library and store version..
         /// </summary>
-        internal static string _Store_MissingSprocParametersLocal {
+        public static string _Store_MissingSprocParametersLocal {
             get {
                 return ResourceManager.GetString("_Store_MissingSprocParametersLocal", resourceCulture);
             }
@@ -424,7 +423,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Unable to create schema info with name &apos;{0}&apos; as there is already an entry with the same name..
         /// </summary>
-        internal static string _Store_SchemaInfo_NameConflict {
+        public static string _Store_SchemaInfo_NameConflict {
             get {
                 return ResourceManager.GetString("_Store_SchemaInfo_NameConflict", resourceCulture);
             }
@@ -433,7 +432,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Unable to {0} schema info with name &apos;{1}&apos; since there is no entry by the given name..
         /// </summary>
-        internal static string _Store_SchemaInfo_NameDoesNotExist {
+        public static string _Store_SchemaInfo_NameDoesNotExist {
             get {
                 return ResourceManager.GetString("_Store_SchemaInfo_NameDoesNotExist", resourceCulture);
             }
@@ -442,7 +441,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; already exists in store for shard map &apos;{1}&apos;. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can happen when another concurrent user adds the shard to the store..
         /// </summary>
-        internal static string _Store_Shard_AlreadyExistsGlobal {
+        public static string _Store_Shard_AlreadyExistsGlobal {
             get {
                 return ResourceManager.GetString("_Store_Shard_AlreadyExistsGlobal", resourceCulture);
             }
@@ -451,7 +450,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; could not be found in the shard map manager database. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can happen when another concurrent user removes the shard from the store..
         /// </summary>
-        internal static string _Store_Shard_DoesNotExistGlobal {
+        public static string _Store_Shard_DoesNotExistGlobal {
             get {
                 return ResourceManager.GetString("_Store_Shard_DoesNotExistGlobal", resourceCulture);
             }
@@ -460,7 +459,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; has mappings associated with it. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. Remove all the mappings associated with the shard before attempting the operation..
         /// </summary>
-        internal static string _Store_Shard_HasMappingsGlobal {
+        public static string _Store_Shard_HasMappingsGlobal {
             get {
                 return ResourceManager.GetString("_Store_Shard_HasMappingsGlobal", resourceCulture);
             }
@@ -469,7 +468,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard referecing location &apos;{0}&apos; already exists in store for shard map &apos;{1}&apos;. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can happen when another concurrent user has added a shard with specified location in store..
         /// </summary>
-        internal static string _Store_Shard_LocationAlreadyExistsGlobal {
+        public static string _Store_Shard_LocationAlreadyExistsGlobal {
             get {
                 return ResourceManager.GetString("_Store_Shard_LocationAlreadyExistsGlobal", resourceCulture);
             }
@@ -478,7 +477,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; has been updated in store. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can occur if another concurrent user updates the shard. Perform a GetShard operation for the shard location to obtain the updated instance..
         /// </summary>
-        internal static string _Store_Shard_VersionMismatchGlobal {
+        public static string _Store_Shard_VersionMismatchGlobal {
             get {
                 return ResourceManager.GetString("_Store_Shard_VersionMismatchGlobal", resourceCulture);
             }
@@ -487,7 +486,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map with name &apos;{0}&apos; already exists in the store. Error occurred while executing stored procedure &apos;{1}&apos; for operation &apos;{2}&apos;..
         /// </summary>
-        internal static string _Store_ShardMap_AlreadyExistsGlobal {
+        public static string _Store_ShardMap_AlreadyExistsGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMap_AlreadyExistsGlobal", resourceCulture);
             }
@@ -496,7 +495,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; has shards associated with it. Shard maps can only be removed if there are no shards associated with them. Error occurred while executing stored procedure &apos;{1}&apos; for operation &apos;{2}&apos;..
         /// </summary>
-        internal static string _Store_ShardMap_ContainsShardsGlobal {
+        public static string _Store_ShardMap_ContainsShardsGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMap_ContainsShardsGlobal", resourceCulture);
             }
@@ -505,7 +504,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; does not exist in the store. Error occurred while executing stored procedure &apos;{1}&apos; for operation &apos;{2}&apos; for shard &apos;{3}&apos;. This can happen if another concurrent user deletes the shard map..
         /// </summary>
-        internal static string _Store_ShardMap_DoesNotExistGlobal {
+        public static string _Store_ShardMap_DoesNotExistGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMap_DoesNotExistGlobal", resourceCulture);
             }
@@ -514,7 +513,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; does not exist on shard &apos;{1}&apos;. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can happen if another concurrent user deletes the shard map..
         /// </summary>
-        internal static string _Store_ShardMap_DoesNotExistLocal {
+        public static string _Store_ShardMap_DoesNotExistLocal {
             get {
                 return ResourceManager.GetString("_Store_ShardMap_DoesNotExistLocal", resourceCulture);
             }
@@ -523,7 +522,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Data structures for shard map manager persistence already exists at the target location..
         /// </summary>
-        internal static string _Store_ShardMapManager_AlreadyExistsGlobal {
+        public static string _Store_ShardMapManager_AlreadyExistsGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMapManager_AlreadyExistsGlobal", resourceCulture);
             }
@@ -532,7 +531,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Data structures for shard map manager persistence do not exist at the target location..
         /// </summary>
-        internal static string _Store_ShardMapManager_DoesNotExistGlobal {
+        public static string _Store_ShardMapManager_DoesNotExistGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMapManager_DoesNotExistGlobal", resourceCulture);
             }
@@ -541,7 +540,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; is already locked. Error occurred while executing procedure &apos;{2}&apos; for operation &apos;{3}&apos; on the shard map manager database. This can happen if another concurrent user locks the mapping..
         /// </summary>
-        internal static string _Store_ShardMapper_LockMappingAlreadyLocked {
+        public static string _Store_ShardMapper_LockMappingAlreadyLocked {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_LockMappingAlreadyLocked", resourceCulture);
             }
@@ -550,7 +549,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; is locked and correct lock token is not provided. Error occurred while executing procedure &apos;{2}&apos; for operation &apos;{3}&apos; on the shard map manager database. This can happen if another concurrent user locks the mapping..
         /// </summary>
-        internal static string _Store_ShardMapper_LockOwnerDoesNotMatch {
+        public static string _Store_ShardMapper_LockOwnerDoesNotMatch {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_LockOwnerDoesNotMatch", resourceCulture);
             }
@@ -559,7 +558,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; in the shard map &apos;{1}&apos; does not exist. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can occur if another concurrent user has already removed the mapping..
         /// </summary>
-        internal static string _Store_ShardMapper_MappingDoesNotExistGlobal {
+        public static string _Store_ShardMapper_MappingDoesNotExistGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_MappingDoesNotExistGlobal", resourceCulture);
             }
@@ -568,7 +567,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; in the shard map &apos;{1}&apos; has &apos;Online&apos; status.  Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. Updates to a mapping involving modification of the shard location or removal require the mapping to be &apos;Offline&apos;. .
         /// </summary>
-        internal static string _Store_ShardMapper_MappingIsNotOffline {
+        public static string _Store_ShardMapper_MappingIsNotOffline {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_MappingIsNotOffline", resourceCulture);
             }
@@ -577,7 +576,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping containing the given key value could not be located in the shard map &apos;{0}&apos;. Error occurred while executing stored procedure &apos;{1}&apos; for operation &apos;{2}&apos;..
         /// </summary>
-        internal static string _Store_ShardMapper_MappingNotFoundForKeyGlobal {
+        public static string _Store_ShardMapper_MappingNotFoundForKeyGlobal {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_MappingNotFoundForKeyGlobal", resourceCulture);
             }
@@ -586,7 +585,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; in the shard map &apos;{1}&apos; cannot be added because the {2} it covers is already mapped by another mapping. Error occurred while executing stored procedure &apos;{3}&apos; for operation &apos;{4}&apos;. This can occur if another concurrent user has already added a mapping covering the given {2}..
         /// </summary>
-        internal static string _Store_ShardMapper_MappingPointOrRangeAlreadyMapped {
+        public static string _Store_ShardMapper_MappingPointOrRangeAlreadyMapped {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_MappingPointOrRangeAlreadyMapped", resourceCulture);
             }
@@ -595,7 +594,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; could not be taken offline because all existing connections on the shard could not be terminated. Error occurred during &apos;{2}&apos; operation while executing stored procedure &apos;{3}&apos; on shard &apos;{4}&apos;..
         /// </summary>
-        internal static string _Store_ShardMapper_UnableToKillSessions {
+        public static string _Store_ShardMapper_UnableToKillSessions {
             get {
                 return ResourceManager.GetString("_Store_ShardMapper_UnableToKillSessions", resourceCulture);
             }
@@ -604,7 +603,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Store Error: {0}. The error occurred while attempting to perform the underlying storage operation during &apos;{1}&apos; operation on the shard map manager database. See the inner StoreException for details..
         /// </summary>
-        internal static string _Store_SqlExceptionGlobal {
+        public static string _Store_SqlExceptionGlobal {
             get {
                 return ResourceManager.GetString("_Store_SqlExceptionGlobal", resourceCulture);
             }
@@ -613,7 +612,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Store Error: {0}. The error occurred while attempting to perform the underlying storage operation during &apos;{1}&apos; operation on shard &apos;{2}&apos;. See the inner StoreException for details..
         /// </summary>
-        internal static string _Store_SqlExceptionLocal {
+        public static string _Store_SqlExceptionLocal {
             get {
                 return ResourceManager.GetString("_Store_SqlExceptionLocal", resourceCulture);
             }
@@ -622,7 +621,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Exclusive access to application resource &apos;{0}&apos; could not be acquired..
         /// </summary>
-        internal static string _Store_SqlOperation_LockNotAcquired {
+        public static string _Store_SqlOperation_LockNotAcquired {
             get {
                 return ResourceManager.GetString("_Store_SqlOperation_LockNotAcquired", resourceCulture);
             }
@@ -631,7 +630,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Exclusive access to application resource &apos;{0}&apos; could not be released..
         /// </summary>
-        internal static string _Store_SqlOperation_LockNotReleased {
+        public static string _Store_SqlOperation_LockNotReleased {
             get {
                 return ResourceManager.GetString("_Store_SqlOperation_LockNotReleased", resourceCulture);
             }
@@ -640,7 +639,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Error occurred while performing store operation. See the inner SqlException for details..
         /// </summary>
-        internal static string _Store_StoreException {
+        public static string _Store_StoreException {
             get {
                 return ResourceManager.GetString("_Store_StoreException", resourceCulture);
             }
@@ -649,7 +648,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Unexpected error code found while processing errors returned from the shard map manager store. This can occur because of a defect in the client library..
         /// </summary>
-        internal static string _Store_UnexpectedErrorGlobal {
+        public static string _Store_UnexpectedErrorGlobal {
             get {
                 return ResourceManager.GetString("_Store_UnexpectedErrorGlobal", resourceCulture);
             }
@@ -658,7 +657,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Unexpected error code found while processing errors returned from the shard location &apos;{0}&apos;. This can occur because of a defect in the client library..
         /// </summary>
-        internal static string _Store_UnexpectedErrorLocal {
+        public static string _Store_UnexpectedErrorLocal {
             get {
                 return ResourceManager.GetString("_Store_UnexpectedErrorLocal", resourceCulture);
             }
@@ -667,7 +666,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map manager store version &apos;{0}&apos; is not compatible with the version &apos;{1}&apos; supported by client library. Please upgrade the {2}..
         /// </summary>
-        internal static string _Store_UnsupportedLibraryVersionGlobal {
+        public static string _Store_UnsupportedLibraryVersionGlobal {
             get {
                 return ResourceManager.GetString("_Store_UnsupportedLibraryVersionGlobal", resourceCulture);
             }
@@ -676,7 +675,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map manager store version &apos;{0}&apos; at shard &apos;{1}&apos; is not compatible with the version &apos;{2}&apos; supported by client library. Please upgrade the {3}..
         /// </summary>
-        internal static string _Store_UnsupportedLibraryVersionLocal {
+        public static string _Store_UnsupportedLibraryVersionLocal {
             get {
                 return ResourceManager.GetString("_Store_UnsupportedLibraryVersionLocal", resourceCulture);
             }
@@ -685,7 +684,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Mapping referencing shard &apos;{0}&apos; associated with shard map &apos;{1}&apos; no longer exists in store. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos; on the shard. This can happen if another concurrent user has deleted or modified the mapping..
         /// </summary>
-        internal static string _Store_Validate_MappingDoesNotExist {
+        public static string _Store_Validate_MappingDoesNotExist {
             get {
                 return ResourceManager.GetString("_Store_Validate_MappingDoesNotExist", resourceCulture);
             }
@@ -694,7 +693,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to The shard key value for an OpenConnection request is associated with a mapping that is marked ‘Offline’.  Data containing this key value is likely being moved, and the connection is blocked to avoid data corruption.  Validated connection requests for this shardlet will succeed when the mapping is back ‘Online’.  Shard: &apos;{0}&apos;.  Shard map: &apos;{1}&apos;.  Error occurred while executing stored procedure &apos;{3}&apos; for operation &apos;{2}&apos; on the shard..
         /// </summary>
-        internal static string _Store_Validate_MappingIsOffline {
+        public static string _Store_Validate_MappingIsOffline {
             get {
                 return ResourceManager.GetString("_Store_Validate_MappingIsOffline", resourceCulture);
             }
@@ -703,7 +702,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; no longer exists in store. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos; on the shard. This can happen if another concurrent user deletes the shard. .
         /// </summary>
-        internal static string _Store_Validate_ShardDoesNotExist {
+        public static string _Store_Validate_ShardDoesNotExist {
             get {
                 return ResourceManager.GetString("_Store_Validate_ShardDoesNotExist", resourceCulture);
             }
@@ -712,7 +711,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard map &apos;{0}&apos; associated with shard &apos;{1}&apos; no longer exists in store. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos;. This can happen if another concurrent user deletes the shard map..
         /// </summary>
-        internal static string _Store_Validate_ShardMapDoesNotExist {
+        public static string _Store_Validate_ShardMapDoesNotExist {
             get {
                 return ResourceManager.GetString("_Store_Validate_ShardMapDoesNotExist", resourceCulture);
             }
@@ -721,7 +720,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         /// <summary>
         ///   Looks up a localized string similar to Shard &apos;{0}&apos; belonging to shard map &apos;{1}&apos; has been modified in the store. Error occurred while executing stored procedure &apos;{2}&apos; for operation &apos;{3}&apos; on the shard. This can happen if another concurrent user performs modification operations on the shard or its associated mappings..
         /// </summary>
-        internal static string _Store_Validate_ShardVersionMismatch {
+        public static string _Store_Validate_ShardVersionMismatch {
             get {
                 return ResourceManager.GetString("_Store_Validate_ShardVersionMismatch", resourceCulture);
             }

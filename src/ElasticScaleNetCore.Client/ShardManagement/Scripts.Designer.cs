@@ -10,7 +10,6 @@
 
 namespace ElasticScaleNetCore.Client.ShardManagement {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -23,7 +22,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Scripts {
+    public class Scripts {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -37,10 +36,10 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.Scripts", typeof(Scripts).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ElasticScaleNetCore.Client.ShardManagement.Scripts", typeof(Scripts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -52,7 +51,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -76,7 +75,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///--------------------------------------- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CreateShardMapManagerGlobal {
+        public static string CreateShardMapManagerGlobal {
             get {
                 return ResourceManager.GetString("CreateShardMapManagerGlobal", resourceCulture);
             }
@@ -97,7 +96,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///--------------------------------------- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CreateShardMapManagerLocal {
+        public static string CreateShardMapManagerLocal {
             get {
                 return ResourceManager.GetString("CreateShardMapManagerLocal", resourceCulture);
             }
@@ -114,7 +113,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///-- Recovery
         ///--------------------------- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string DropShardMapManagerGlobal {
+        public static string DropShardMapManagerGlobal {
             get {
                 return ResourceManager.GetString("DropShardMapManagerGlobal", resourceCulture);
             }
@@ -132,7 +131,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///-- Shard Mappings
         ///-------------------- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string DropShardMapManagerLocal {
+        public static string DropShardMapManagerLocal {
             get {
                 return ResourceManager.GetString("DropShardMapManagerLocal", resourceCulture);
             }
@@ -149,7 +148,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///-- add a column to ShardMapManagerGlobal table to hold SCH-M lock during upgrade
         ///alter table __Sh [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerGlobalFrom0_0To1_0 {
+        public static string UpgradeShardMapManagerGlobalFrom0_0To1_0 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerGlobalFrom0_0To1_0", resourceCulture);
             }
@@ -168,7 +167,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///-- creat [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerGlobalFrom1_0To1_1 {
+        public static string UpgradeShardMapManagerGlobalFrom1_0To1_1 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerGlobalFrom1_0To1_1", resourceCulture);
             }
@@ -187,7 +186,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///if object_id(N&apos;__ShardManagement [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerGlobalFrom1_1To1_2 {
+        public static string UpgradeShardMapManagerGlobalFrom1_1To1_2 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerGlobalFrom1_1To1_2", resourceCulture);
             }
@@ -203,7 +202,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///-- drop extra column from ShardMapManagerGlobal table which was added as first step to hold [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerGlobalFrom1000_0To1000_1 {
+        public static string UpgradeShardMapManagerGlobalFrom1000_0To1000_1 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerGlobalFrom1000_0To1000_1", resourceCulture);
             }
@@ -220,7 +219,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///-- add a column to ShardMapManagerLocal table to hold SCH-M lock during upgrade
         ///alter table __Shar [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerLocalFrom0_0To1_0 {
+        public static string UpgradeShardMapManagerLocalFrom0_0To1_0 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerLocalFrom0_0To1_0", resourceCulture);
             }
@@ -239,7 +238,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///-- create S [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerLocalFrom1_0To1_1 {
+        public static string UpgradeShardMapManagerLocalFrom1_0To1_1 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerLocalFrom1_0To1_1", resourceCulture);
             }
@@ -257,7 +256,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///if object_id(N&apos;__ShardManagement.spUpdateShardLocal&apos;, N&apos;P&apos; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerLocalFrom1_1To1_2 {
+        public static string UpgradeShardMapManagerLocalFrom1_1To1_2 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerLocalFrom1_1To1_2", resourceCulture);
             }
@@ -273,7 +272,7 @@ namespace ElasticScaleNetCore.Client.ShardManagement {
         ///
         ///-- drop extra column from ShardMapManagerLocal table which was added as first step to hold S [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string UpgradeShardMapManagerLocalFrom1000_0To1000_1 {
+        public static string UpgradeShardMapManagerLocalFrom1000_0To1000_1 {
             get {
                 return ResourceManager.GetString("UpgradeShardMapManagerLocalFrom1000_0To1000_1", resourceCulture);
             }
