@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using ElasticScaleNetCore.Client.ShardManagement;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
 {

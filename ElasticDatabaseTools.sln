@@ -1,20 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8DAAA1A0-7DF5-402B-8E9A-52A8839A02F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{826B622C-83F7-4A8E-AD78-40D11FEC960B}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2752D108-A8FE-43E3-86CB-45E80625E98F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4AF9CAD2-F444-47D5-9945-448B28CCA98F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ElasticScaleNetCore.Client", "src\ElasticScaleNetCore.Client\ElasticScaleNetCore.Client.xproj", "{A4AE0AF5-0567-4CF6-95B0-35058E6CA3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticScaleNetCore.Client", "src\ElasticScaleNetCore.Client\ElasticScaleNetCore.Client.csproj", "{A4AE0AF5-0567-4CF6-95B0-35058E6CA3F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A4AE0AF5-0567-4CF6-95B0-35058E6CA3F9} = {8DAAA1A0-7DF5-402B-8E9A-52A8839A02F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DEEB01E-8500-4335-B9E7-A14482F24586}
 	EndGlobalSection
 EndGlobal

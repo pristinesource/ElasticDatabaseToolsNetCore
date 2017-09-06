@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using ElasticScaleNetCore.Client.ShardManagement;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement.Schema
 {

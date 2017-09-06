@@ -2,9 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 
 namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
@@ -71,10 +73,9 @@ namespace Microsoft.Azure.SqlDatabase.ElasticScaleNetCore.ShardManagement
                             null,
                             new object[] { manager, ssm },
                             CultureInfo.InvariantCulture);
-
                 default:
                     Debug.Assert(ssm.MapType == ShardMapType.Range);
-                    // Create RangeShardMap<TKey>
+                    // Create RangeShardMap<TKey> 
                     return (ShardMap)Activator.CreateInstance(
                             typeof(RangeShardMap<>).MakeGenericType(
                                 ShardKey.TypeFromShardKeyType(ssm.KeyType)),
